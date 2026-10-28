@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+.ad-sidebar {
+    width: 160px;
+    padding: 20px 10px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    display: none;
+}
+
+.ad-box {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.ad-box p {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.ad-placeholder {
+    background: #0f172a;
+    border: 2px dashed #475569;
+    border-radius: 8px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 14px;
+    text-align: center;
+}
+
+.main-container {
+    max-width: 720px;
+    width: 100%;
+    padding: 20px 16px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 16px 0;
+}
+
+header h1 {
+    font-size: 1.9rem;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.tagline {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.free-badge {
+    display: inline-block;
+    background: #065f46;
+    color: #6ee7b7;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.selection-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 24px 20px;
+}
+
+.selection-card h2 {
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 14px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.select-btn {
+    flex: 1;
+    min-width: 70px;
+    padding: 10px 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.select-btn.active {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    border-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.btn {
+    border: none;
+    padding: 13px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    color: white;
+}
+
+.btn.secondary {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.back-btn {
+    background: transparent;
+    border: 1px solid #475569;
+    color: #94a3b8;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.progress-info {
+    display: flex;
+    gap: 14px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #334155;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0ea5e9, #a78bfa);
+    width: 10%;
+    transition: width 0.3s;
+}
+
+.question-box {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 22px;
+    border: 1px solid #334155;
+    margin-bottom: 14px;
+}
+
+#question-text {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    color: #f8fafc;
+    line-height: 1.55;
+}
+
+.option {
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 13px 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.option.correct {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.12);
+}
+
+.option.wrong {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.option .opt-letter {
+    background: #334155;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.option.correct .opt-letter {
+    background: #22c55e;
+    color: #052e16;
+}
+
+.option.wrong .opt-letter {
+    background: #ef4444;
+    color: white;
+}
+
+.explanation-box {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid #334155;
+}
+
+.explanation-box.correct-ans {
+    border-color: #22c55e;
+}
+
+.explanation-box.wrong-ans {
+    border-color: #ef4444;
+}
+
+#result-title {
+    margin-bottom: 8px;
+}
+
+#explanation-text {
+    color: #cbd5e1;
+    margin-bottom: 14px;
+    line-height: 1.55;
+}
+
+.result-card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 36px 22px;
+    text-align: center;
+    border: 1px solid #334155;
+}
+
+.score-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 20px auto;
+    color: white;
+}
+
+.result-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 16px 0;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+@media (min-width: 1100px) {
+    .ad-sidebar {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.55rem;
+    }
+}
